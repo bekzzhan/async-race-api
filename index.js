@@ -42,7 +42,8 @@ const state = { velocity: {}, blocked: {} };
 
 server.use(middlewares);
 server.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*')
+    res.header('Access-Control-Allow-Origin', 'http://localhost:5501')
+    res.header('Access-Control-Allow-Headers', '*')
     next()
   })
 
