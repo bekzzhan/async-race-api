@@ -42,7 +42,7 @@ const state = { velocity: {}, blocked: {} };
 
 server.use(middlewares);
 server.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'http://localhost:5501')
+    res.header('Access-Control-Allow-Origin', 'https://rolling-scopes-school.github.io/bekzzhan-JSFE2021Q1/async-race/')
     res.header('Access-Control-Allow-Headers', '*')
     next()
   })
