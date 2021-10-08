@@ -41,6 +41,10 @@ const PORT = process.env.PORT || 3000;
 const state = { velocity: {}, blocked: {} };
 
 server.use(middlewares);
+server.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*')
+    next()
+  })
 
 server.get('/engine', (req, res) => {
     const { id, status } = req.query;
