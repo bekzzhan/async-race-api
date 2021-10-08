@@ -34,7 +34,7 @@ const db = {
 
 const server = jsonServer.create();
 const router = jsonServer.router(db);
-const middlewares = jsonServer.defaults();
+const middlewares = jsonServer.defaults({ noCors: true });
 
 const PORT = 3000;
 
